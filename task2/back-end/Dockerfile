@@ -8,8 +8,8 @@ RUN apt-get update && apt-get upgrade -y && \
 # Remove EXTERNALLY-MANAGED to avoid errors with pip3 installs
 RUN rm /usr/lib/python*/EXTERNALLY-MANAGED
 
-# Install Flask using pip3
-RUN pip3 install flask
+# Install Flask and Flask-CORS using pip3
+RUN pip3 install flask flask-cors
 
 # Set the working directory to /app
 WORKDIR /app
