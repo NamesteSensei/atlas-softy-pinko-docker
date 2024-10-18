@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+  <title>Softy Pinko</title>
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
+
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- Main Banner Section Start -->
+  <section class="section main-banner" id="top" data-section="section1">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+          <!-- This new H1 is added for dynamic content -->
+          <h1 id="dynamic-content"></h1>
+          <h1>We provide the best <strong>strategy</strong><br>to grow up your<strong>business</strong></h1>
+          <a href="#features" class="main-button-slider">Discover More</a>        
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Main Banner Section End -->
+
+  <!-- Other sections of your page -->
+
+  <!-- ***** Footer Start ***** -->
+  <!-- Footer content -->
+
+  <!-- ***** Footer End ***** -->
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery-2.1.0.min.js"></script>
+  <script src="assets/js/popper.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/scrollreveal.min.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/imgfix.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <!-- Script for AJAX to dynamically load content from the back-end -->
+  <script>
+    // Load dynamic data from the back-end via the proxy server
+    $(function() {
+      $.ajax({
+        type: "GET",
+        url: "/api/hello",  // Using the proxy route to access the back-end
+        success: function(data) {
+          console.log(data);
+          $('#dynamic-content').text(data);  // Updating the dynamic content
+        },
+        error: function(err) {
+          console.error('Error fetching data:', err);  // Handle error
+        }
+      });
+    });
+  </sc
